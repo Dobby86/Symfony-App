@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+
+        <div class="container-fluid"> 
+
+
+          {% include "layouts/header.html.twig" %}
+          
+              {% for label, messages in app.flashes %}
+                {% for message in messages %}
+                  
+                    <div class="alert alert-{{ label }} alert-dismissible fade show" role="alert">
+                          {{ message }}
+                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                     </button>
+                     </div>
+                 {% endfor %}
+              {% endfor %}
+
+                   
+
+
+              {% block content %} pinco pallino {% endblock %}
+
+
+          {% include "layouts/footer.html.twig" %}
+
+
+        
+        
+         </div>
+
+{% endblock %}
+

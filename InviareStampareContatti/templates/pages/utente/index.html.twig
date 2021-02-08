@@ -1,0 +1,27 @@
+{% extends 'content.html.twig' %}
+
+{% block title %}Hello MainController!{% endblock %}
+
+{% block content %}
+      
+          {{ form_start(utenteForm) }}
+          <h2>Inserire i dati richiesti</h2>
+                {{ form_widget(utenteForm) }}
+            <button type="submit" class="btn btn-success">Invia</button>
+            
+          {{ form_end(utenteForm)}}
+
+          {{form_start(utenteForm)}}
+                 <div class="container"> 
+                     <div class="row"> 
+                          <div class="col-sm-6"> 
+                               <button class="btn btn-info"><a href="{{path("utente_lista")}}">Mostrami la lista Utenti!!</a></button>
+                                   <h2></h2>
+                            </div>
+                    </div>
+                  </div>
+                  
+        {{form_end(utenteForm)}}
+           
+                
+{% endblock %}
